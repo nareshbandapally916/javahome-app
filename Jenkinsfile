@@ -12,7 +12,7 @@ pipeline {
                                 disableHostKeyChecking: true, 
                                 installation: 'ansible2', 
                                 inventory: 'dev.inv', 
-                                playbook: 'ansible.yml', 
+                                playbook: 'apache.yml', 
                                 vaultTmpPath: ''
             }
         
