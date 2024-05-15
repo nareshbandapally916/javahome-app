@@ -1,11 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage('SCM Checkout')
+        stage('SCM Checkout') {
             steps {
                 git branch: 'develop', url: 'https://github.com/nareshbandapally916/javahome-app'
             }
-        stage('Execute Ansible')
+        }
+        stage('Execute Ansible') {
             steps {
                 ansiblePlaybook credentialsId: 'private-key', 
                                 disableHostKeyChecking: true, 
@@ -15,6 +16,7 @@ pipeline {
                                 vaultTmpPath: ''
             }
         
-    }
+        }
     
+    }
 }
